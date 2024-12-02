@@ -1,5 +1,5 @@
-Documentation for Installing Kubecost and Integrating  Grafana
-Overview
+Documentation for Installing Kubecost and Integrating  Grafana 
+overview
 This document guides you through the installation and configuration of Kubecost, Grafana in a Kubernetes environment. These tools work together to monitor the costs of Kubernetes resources.
 Table of Contents
 1. Introduction
