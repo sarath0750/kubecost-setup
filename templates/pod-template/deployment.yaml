@@ -1,36 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubecost-grafana-deployment
+  name: kubecost
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: kubecost-grafana
+      app: kubecost
   template:
     metadata:
       labels:
-        app: kubecost-grafana
+        app: kubecost
     spec:
       containers:
-        - name: grafana
-          image: grafana/grafana:latest
-          ports:
-            - containerPort: 3000
-          env:
-            - name: GF_SECURITY_ADMIN_PASSWORD
-              value: "admin"  # Set Grafana admin password
-            - name: GF_SECURITY_ALLOW_EMBEDDING
-              value: "true"
-            - name: GF_SERVER_ROOT_URL
-              value: "%(protocol)s://%(domain)s:%(http_port)s/"
-        - name: kubecost
-          image: kubecost/cost-analyzer:latest
-          ports:
-            - containerPort: 9090
-          env:
-            - name: COST_ANALYZER_UI_PORT
-              value: "9090"  # Kubecost UI port
-            - name: KUBECOST_NAMESPACE
-              value: "kubecost"
-
+      - name: kubecost
+        image: kubecost/cost-analyzer:latest
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
