@@ -12,7 +12,6 @@ global:
     domainName: cost-analyzer-grafana.default.svc  # example grafana domain Ignored if enabled: true
     scheme: "http"  # http or https, for the domain name above.
     proxy: true  # If true, the kubecost frontend will route to your grafana through its service endpoint
-    serveFromSubPath: true
     # fqdn: cost-analyzer-grafana.default.svc
 
   # Enable only when you are using GCP Marketplace ENT listing. Learn more at https://console.cloud.google.com/marketplace/product/kubecost-public/kubecost-ent
@@ -3552,4 +3551,3 @@ extraObjects: []
 #             host: kubecost.kubecost.svc.cluster.local
 #             port:
 #               number: 80
-
