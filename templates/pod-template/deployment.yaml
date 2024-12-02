@@ -17,8 +17,8 @@ spec:
         image: kubecost/cost-analyzer:latest
         resources:
           requests:
-            memory: "512Mi"
-            cpu: "250m"
-          limits:
-            memory: "1Gi"
-            cpu: "500m"
+            cpu: "10m"
+            memory: "55Mi"
+          # limits:
+            # cpu: "100m"
+            # memory: "256Mi"
