@@ -329,7 +329,6 @@ echo "Validation complete! If all pods are running, your setup is successful."
 
 
 
-
 Deploy.sh
 
 
@@ -343,9 +342,6 @@ kubectl apply -f pod-template.yaml
 
 # Display a message to confirm that the deployment is complete
 echo "Deployment is done! Your resources are created in Kubernetes."
-
-
-
 
 
 
